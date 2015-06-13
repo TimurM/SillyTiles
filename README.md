@@ -1,4 +1,10 @@
+#SillyTiles
 
+http://timurmeyster.me/SillyTiles/#/
+
+Instructions:
+* Create a board and then click on tiles to change colors
+* You can also save and retrieve your saved boards
 
 Here are the Resources I've used;
 
