@@ -11,6 +11,10 @@
            $scope.boardName = '';
          };
 
+         $scope.resetBoard = function() {
+           $scope.genBoard();
+         }
+
          $scope.retrieveBoard = function(boardName) {
            $scope.grid = null;
            $scope.grid = gridsFactory.retrieveGrid(boardName)
