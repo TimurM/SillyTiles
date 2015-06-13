@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row grid-container">
+    <div id="sidebar" class="col-md-2">
+          <div class="row">
+
+      <!-- Create Board Section -->
+            <div class="col-md-12">
+              <h4>Create a Board</h4>
+              <form>
+                <label>Rows
+                  <input type="number" ng-model="square.rows" value="" required>
+                </label>
+                <label>Columns
+                  <input type="number" ng-model="square.columns" value="" required>
+                </label>
+                <button type="submit" class="btn btn-sm btn-primary" ng-click="genBoard()">Create Tiles</button>
+
+              </form>
+            </div>
+
+      <!-- Save Board section -->
+            <div class="col-md-12">
+              <h4>Save a Board</h4>
+              <form>
+                <label>
+                  <input type="text" ng-model="boardName" placeholder="Name">
+                </label>
+                <button type="submit" class="btn btn-sm btn-primary" ng-click="saveBoard()">Save Board
+                </button>
+              </form>
+            </div>
+
+        <!-- Galery Section -->
+              <div class="col-md-12">
+                <h4>Gallery</h4>
+                <div class="saved-boards">
+                  <table class="table table-striped">
+                    <tr>
+                      <th>Saved Boards</th>
+                      <th></th>
+                    </tr>
+                    <tr class="repeat-animation" ng-repeat="savedBoard in savedBoardNames">
+                      <td ng-class="animation">
+                        <a ng-click="retrieveBoard(savedBoard)"><span>{{ savedBoard}}</span></a>
+                      <td>
+                    </tr>
+                  </table>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    <div id="main-grid" class="col-md-9">
+      <table>
+        <tr class="repeat-animation" ng-repeat="innerArray in grid">
+          <td class="tile" ng-class="animation" ng-repeat="tile in innerArray" ng-style="{{tile.color}}">
+
+        <!-- tilesRender directive -->
+            <tiles-render data="tile">
+                <span class="glyphicon glyphicon-record"></span>
+            </tiles-render>
+          <td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+body {
+    background-color: #ffffff;
+    color: rgb(53, 62, 72);
+}
+
+.navbar {
+  background-color: #2aaadd;
+  font-size: 24px;
+  color: white;
+  padding: 5px 0px 0px 15px;
+}
+
+.grid-container {
+  background-color: rgb(64,64,64) ;
+  border-radius: 5px;
+}
+
+#sidebar {
+  background-color: rgb(184,184,184);
+  border-radius: 5px;
+  margin: 15px;
+  padding-bottom: 10px;
+}
+
+#main-grid {
+  margin: 15px;
+}
+
+.tile {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  margin-bottom: 0px;
+}
+
+.tile span {
+  font-size: 50px;
+}
+
+input {
+  width: 100%;
+}
+
+.saved-boards {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
